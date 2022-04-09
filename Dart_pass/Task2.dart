@@ -1,87 +1,66 @@
-abstract class Animal {
+abstract class Animal{
 
-  void printName();
-
-  void printSound();
-
+  String printName();
+  String printSound();
 }
+ق
+class Dog extends Animal{
 
- 
-
-class Dog extends Animal {
-
-  void printName() {
-
-    print("Dog");
-
+  @override
+  printName()
+  {
+    return 'Dog';
   }
-
- 
-
-  void printSound() {
-
-    print("Woof");
-
+  
+  @override
+  printSound()
+  {
+    return 'Woof';
   }
 
 }
 
- 
+class Cat extends Animal{
 
-class Cat extends Animal {
-
-  void printName() {
-
-    print("Cat");
-
+  @override
+  printName()
+  {
+    return 'cat';
   }
-
- 
-
-  void printSound() {
-
-    print("Meaw");
-
+  
+  @override
+  printSound()
+  {
+    return 'Meaw';
   }
 
 }
 
- 
+class Cow extends Animal{
 
-class Cow extends Animal {
-
-  void printName() {
-
-    print("Cow");
-
+  @override
+  printName()
+  {
+    return 'Cow';
   }
 
- 
-
-  void printSound() {
-
-    print("Moo");
-
+  @override
+  printSound()
+  {
+    return 'Moo';
   }
 
 }
-
  
+void def(name, sound)
+{
+  print('the name of the animal is :$name and the sound of the $name is like: $sound\n');
+}
 
 void main() {
 
-  var c = Cat(), d = Dog(), w = Cow();
-
-  c.printName();
-
-  c.printSound();
-
-  d.printName();
-
-  d.printSound();
-
-  w.printName();
-
-  w.printSound();
-
+  def(Cat().printName(), Cat().printSound());
+  def(Dog().printName(), Dog().printSound());
+  def(Cow().printName(), Cow().printSound());
+  
 }
